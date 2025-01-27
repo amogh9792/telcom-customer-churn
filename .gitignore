@@ -1,0 +1,7 @@
+virtual_environment/
+__pycache__/
+artifact
+test-tcc-artifact/
+tcc-dev-key.pem/
+terraform/
+artifacts/
