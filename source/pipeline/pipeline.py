@@ -33,12 +33,14 @@ class DataPipeline:
         model_predict_obj.initiate_model_prediction()
 
     def run_train_pipeline(self):
+        print(">>>>> TRAIN PIPELINE START <<<<<<")
         self.start_data_ingestion('train')
         self.start_data_validation('train')
         self.start_data_transformation('train')
         self.start_model_train_evaluate()
 
     def run_predict_pipeline(self):
+        print(">>>>>> PREDICT PIPELINE START <<<<<<")
         self.start_data_ingestion('predict')
         self.start_data_validation('predict')
         self.start_data_transformation('predict')

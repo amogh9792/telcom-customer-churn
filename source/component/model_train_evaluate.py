@@ -126,6 +126,7 @@ class ModelTrainEvaluate:
 
     def initiate_model_training(self):
         try:
+            print("Model Training Started...")
 
             logging.info("Start: Model Training and evaluation")
 
@@ -137,7 +138,7 @@ class ModelTrainEvaluate:
 
             self.retrain_final_model(train_data, test_data)
 
-            print('model train done')
+            print('Model train Complete')
 
             logging.info("Complete model training and evaluation")
 

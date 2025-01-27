@@ -91,6 +91,8 @@ class DataValidation:
 
     def initiate_data_validation(self, key):
 
+        print("Data Validation Start..")
+
         logging.info("Start: Data Validation")
 
         if key == 'train':
@@ -116,3 +118,4 @@ class DataValidation:
             export_data_csv(data, self.utility_config.predict_file, self.utility_config.predict_dv_file_path)
 
         logging.info("Complete: Data Validation")
+        print("Data Validation Complete")

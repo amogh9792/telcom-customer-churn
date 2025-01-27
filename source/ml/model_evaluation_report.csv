@@ -1,5 +1,5 @@
 model_name,accuracy,precision,recall,f1,class_report,confu_matrix
-DecisionTreeClassifier,0.7195729537366548,0.5348258706467661,0.509478672985782,0.5218446601941747,"              precision    recall  f1-score   support
+DecisionTreeClassifier,0.7188612099644128,0.5331695331695332,0.514218009478673,0.5235223160434258,"              precision    recall  f1-score   support
 
          0.0       0.79      0.81      0.80       983
          1.0       0.53      0.51      0.52       422
@@ -7,28 +7,28 @@ DecisionTreeClassifier,0.7195729537366548,0.5348258706467661,0.509478672985782,0
     accuracy                           0.72      1405
    macro avg       0.66      0.66      0.66      1405
 weighted avg       0.72      0.72      0.72      1405
-","[[796 187]
- [207 215]]"
-RandomForestClassifier,0.7651245551601423,0.6197916666666666,0.5639810426540285,0.5905707196029777,"              precision    recall  f1-score   support
+","[[793 190]
+ [205 217]]"
+RandomForestClassifier,0.7644128113879004,0.6169665809768637,0.5687203791469194,0.591861898890259,"              precision    recall  f1-score   support
 
-         0.0       0.82      0.85      0.84       983
-         1.0       0.62      0.56      0.59       422
+         0.0       0.82      0.85      0.83       983
+         1.0       0.62      0.57      0.59       422
 
-    accuracy                           0.77      1405
+    accuracy                           0.76      1405
    macro avg       0.72      0.71      0.71      1405
-weighted avg       0.76      0.77      0.76      1405
-","[[837 146]
- [184 238]]"
-GradientBoostingClassifier,0.7672597864768683,0.6082004555808656,0.6327014218009479,0.6202090592334495,"              precision    recall  f1-score   support
+weighted avg       0.76      0.76      0.76      1405
+","[[834 149]
+ [182 240]]"
+GradientBoostingClassifier,0.7665480427046263,0.6093023255813953,0.6208530805687204,0.6150234741784038,"              precision    recall  f1-score   support
 
          0.0       0.84      0.83      0.83       983
-         1.0       0.61      0.63      0.62       422
+         1.0       0.61      0.62      0.62       422
 
     accuracy                           0.77      1405
-   macro avg       0.72      0.73      0.73      1405
+   macro avg       0.72      0.72      0.72      1405
 weighted avg       0.77      0.77      0.77      1405
-","[[811 172]
- [155 267]]"
+","[[815 168]
+ [160 262]]"
 AdaBoostClassifier,0.7608540925266903,0.5863453815261044,0.6919431279620853,0.6347826086956522,"              precision    recall  f1-score   support
 
          0.0       0.86      0.79      0.82       983
@@ -59,13 +59,13 @@ KNeighborsClassifier,0.6882562277580071,0.486159169550173,0.6658767772511849,0.5
 weighted avg       0.73      0.69      0.70      1405
 ","[[686 297]
  [141 281]]"
-XGBClassifier,0.7565836298932385,0.6063829787234043,0.5402843601895735,0.5714285714285714,"              precision    recall  f1-score   support
+XGBClassifier,0.7487544483985765,0.592,0.5260663507109005,0.5570890840652447,"              precision    recall  f1-score   support
 
-         0.0       0.81      0.85      0.83       983
-         1.0       0.61      0.54      0.57       422
+         0.0       0.81      0.84      0.82       983
+         1.0       0.59      0.53      0.56       422
 
-    accuracy                           0.76      1405
-   macro avg       0.71      0.69      0.70      1405
-weighted avg       0.75      0.76      0.75      1405
-","[[835 148]
- [194 228]]"
+    accuracy                           0.75      1405
+   macro avg       0.70      0.69      0.69      1405
+weighted avg       0.74      0.75      0.74      1405
+","[[830 153]
+ [200 222]]"

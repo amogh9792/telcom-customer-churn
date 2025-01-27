@@ -68,8 +68,6 @@ class DataIngestion:
 
                 for col in data.select_dtypes(include=['object']).columns:
                     unique_count = data[col].nunique()
-                    print(unique_count)
-                    print(len(data))
 
                     if unique_count / len(data) > 0.5:
                         data.drop(col, axis=1, inplace=True)
@@ -120,7 +118,7 @@ class DataIngestion:
 
     def initiate_data_ingestion(self, key):
         try:
-
+            print("Data Ingestion Start....")
             logging.info("start: data ingestion")
 
             data = self.export_data_into_feature_store(key)
@@ -135,6 +133,8 @@ class DataIngestion:
             if key == 'predict':
                 export_data_csv(data, self.utility_config.predict_file, self.utility_config.predict_file_path)
 
+            print("Data Ingestion Complete..")
             logging.info("complete: data ingestion")
+
         except ChurnException as e:
             raise e

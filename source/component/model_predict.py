@@ -61,18 +61,17 @@ class ModelPrediction:
 
     def initiate_model_prediction(self):
 
+        print("Model Predictions Start..")
+
         logging.info("Start: Model prediction")
 
         predict_data = import_csv_file(self.utility_config.predict_file, self.utility_config.predict_dt_file_path)
-
-        # predict_data = read_csv_from_s3(self.utility_config.aws_bucket_name, self.utility_config.predict_dt_file_path+'/'+self.utility_config.predict_file)
 
         predict_data = self.clean_data(predict_data)
 
         model = self.load_model_pickle()
 
         feature_data = import_csv_file(self.utility_config.predict_di_feature_store_file_name, self.utility_config.predict_di_feature_store_file_path)
-        # feature_data = read_csv_from_s3(self.utility_config.aws_bucket_name, self.utility_config.predict_di_feature_store_file_path+'/'+self.utility_config.predict_di_feature_store_file_name)
 
         feature_data['Churn'] = self.make_prediction(model, predict_data)
 
@@ -81,6 +80,6 @@ class ModelPrediction:
         self.export_prediction_into_db(feature_data)
         export_data_csv(feature_data, self.utility_config.predict_file, self.utility_config.predict_mp_file_path)
 
-        # upload_artifact_to_s3(feature_data, self.utility_config.predict_file, self.utility_config.predict_mp_file_path, self.utility_config.aws_bucket_name)
-
         logging.info("Complete: Model Prediction")
+
+        print("Model Prediction Complete...")

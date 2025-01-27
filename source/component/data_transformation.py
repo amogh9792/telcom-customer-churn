@@ -124,6 +124,8 @@ class DataTransformation:
 
     def initiate_data_transformation(self, key):
 
+        print("Data Transformation Start..")
+
         if key == 'train':
 
             logging.info("Start: Data transformation for training")
@@ -152,12 +154,10 @@ class DataTransformation:
             logging.info("Start: Data Transformation for prediction")
 
             predict_data = import_csv_file(self.utility_config.predict_file, self.utility_config.predict_dv_file_path)
-            # predict_data = read_csv_from_s3(self.utility_config.aws_bucket_name, self.utility_config.predict_dv_file_path+'/'+self.utility_config.predict_file)
             predict_data = self.feature_encoding(predict_data, target='', load_encoder_path=self.utility_config.dt_multi_class_encoder, key='predict')
             predict_data = self.min_max_scaling(predict_data, key='predict')
 
             export_data_csv(predict_data, self.utility_config.predict_file, self.utility_config.predict_dt_file_path)
 
-            # upload_artifact_to_s3(predict_data, self.utility_config.predict_file, self.utility_config.predict_dt_file_path, self.utility_config.aws_bucket_name)
-
         logging.info("Complete: Data Transformation")
+        print("Data Transformation complete...")
