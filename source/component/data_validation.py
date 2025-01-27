@@ -110,11 +110,9 @@ class DataValidation:
         if key == 'predict':
 
             data = import_csv_file(self.utility_config.predict_file, self.utility_config.predict_file_path)
-            # data = read_csv_from_s3(self.utility_config.aws_bucket_name, self.utility_config.predict_file_path+'/'+self.utility_config.predict_file)
             data = self.handle_missing_value(data, key)
             data = self.outlier_detection_handle(data, key='predict')
 
             export_data_csv(data, self.utility_config.predict_file, self.utility_config.predict_dv_file_path)
-            # upload_artifact_to_s3(data, self.utility_config.predict_file, self.utility_config.predict_dv_file_path, self.utility_config.aws_bucket_name)
 
         logging.info("Complete: Data Validation")

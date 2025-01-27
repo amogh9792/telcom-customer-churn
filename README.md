@@ -34,15 +34,12 @@ The project solution comprises the following components:
 - **Data Preprocessing Script:** Performs data ingestion, transformation, validation, and cleaning tasks to prepare the dataset for modeling.
 - **Model Building Script:** Implements machine learning algorithms, trains models, and evaluates their performance using cross-validation techniques.
 - **Model Evaluation Notebook:** Calculates performance metrics and provides insights into model performance.
-- **Deployment Scripts:** Include AWS Lambda function integration with S3 bucket for model deployment. GitHub Actions workflows automate the CI/CD process for seamless deployment.
-
+- 
 **Key Skills Utilized:**
 
 - Data Analysis and Visualization
 - Data Preprocessing and Cleaning
 - Machine Learning Model Development
 - Model Evaluation and Performance Metrics
-- Deployment on AWS EC2
-- CI/CD with GitHub Actions
 
 Feel free to explore the project repository for detailed code implementation and instructions on running the Telco Customer Churn Prediction solution! #DataScience #MachineLearning #CustomerChurnPrediction #AWS #GitHubActions

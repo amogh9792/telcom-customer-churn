@@ -32,10 +32,6 @@ class DataIngestion:
             cursor = collection.find()
             data = pd.DataFrame(list(cursor))
 
-            # dir_path = os.path.dirname(feature_store_file_path)
-            # os.makedirs(dir_path, exist_ok=True)
-            # data.to_csv(feature_store_file_path, index=False)
-
             export_data_csv(data, feature_store_file_name, feature_store_file_path)
             logging.info("complete: data load from mongoDB")
 
@@ -72,6 +68,8 @@ class DataIngestion:
 
                 for col in data.select_dtypes(include=['object']).columns:
                     unique_count = data[col].nunique()
+                    print(unique_count)
+                    print(len(data))
 
                     if unique_count / len(data) > 0.5:
                         data.drop(col, axis=1, inplace=True)

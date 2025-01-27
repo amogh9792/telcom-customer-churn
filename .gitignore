@@ -1,4 +1,4 @@
-virtual_environment/
+venv_telco/
 __pycache__/
 artifact
 test-tcc-artifact/
