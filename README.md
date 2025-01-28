@@ -24,8 +24,6 @@ This project revolves around predicting customer churn in a telecommunications c
 
 4. **Model Evaluation:** The trained models are evaluated using performance metrics such as accuracy, precision, recall, F1-score, and ROC-AUC to assess their effectiveness in predicting churn.
 
-5. **Model Deployment:** The selected model is deployed using AWS Lambda function, allowing for real-time predictions. Integration with an S3 bucket facilitates data storage and retrieval. GitHub Actions are employed for continuous integration and deployment (CI/CD) to automate the deployment process.
-
 **Solution Implemented:**
 
 The project solution comprises the following components:
