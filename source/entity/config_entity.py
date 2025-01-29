@@ -43,7 +43,9 @@ class PipelineConfig:
         self.train_dt_test_file_path = os.path.join(self.artifact_dir, self.train_pipeline, constant.DT_DIR_NAME)
 
         # model train and evaluate
+        os.makedirs(constant.MODEL_PATH, exist_ok=True)
         self.model_path = os.path.join(constant.MODEL_PATH)
+        os.makedirs(constant.FINAL_MODEL_PATH, exist_ok=True)
         self.final_model_path = os.path.join(constant.FINAL_MODEL_PATH)
 
         self.predict_di_dir = os.path.join(self.artifact_dir, constant.PREDICT_PIPELINE_NAME, constant.DI_DIR_NAME)
